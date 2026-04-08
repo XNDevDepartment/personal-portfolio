@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { m, LazyMotion, domAnimation } from "framer-motion"
 import { ArrowRight, Mail } from "lucide-react"
 import { HERO_CONTENT } from "@/lib/data"
@@ -117,37 +118,33 @@ export function Hero() {
               </m.div>
             </div>
 
-            {/* Visual column — abstract rings */}
+            {/* Photo column */}
             <m.div
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 0, scale: 0.97 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7, delay: 0.4 }}
+              transition={{ duration: 0.7, delay: 0.35 }}
               className="hidden lg:flex items-center justify-center"
-              aria-hidden="true"
             >
-              <div className="relative w-80 h-80">
-                {/* Concentric rings */}
-                {[0, 1, 2, 3].map((i) => (
-                  <div
-                    key={i}
-                    className="absolute inset-0 rounded-full border border-slate-200"
-                    style={{
-                      transform: `scale(${0.4 + i * 0.2})`,
-                      opacity: 1 - i * 0.2,
-                    }}
+              <div className="relative">
+                {/* Decorative ring behind photo */}
+                <div className="absolute -inset-3 rounded-3xl border border-slate-200" />
+                <div className="absolute -inset-6 rounded-3xl border border-slate-100" />
+                {/* Photo */}
+                <div className="relative w-80 h-96 rounded-2xl overflow-hidden border border-slate-200 shadow-xl shadow-slate-200/60">
+                  <Image
+                    src="/avatar.jpg"
+                    alt="Francisco Forte"
+                    fill
+                    className="object-cover object-top"
+                    sizes="320px"
+                    priority
                   />
-                ))}
-                {/* Center dot */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="h-12 w-12 rounded-full bg-accent/10 border-2 border-accent/30 flex items-center justify-center">
-                    <span className="text-accent font-bold text-xs">FF</span>
-                  </div>
                 </div>
-                {/* Floating labels */}
-                <div className="absolute -top-2 left-1/2 -translate-x-1/2 -translate-y-full text-[11px] font-semibold text-slate-400 uppercase tracking-wider whitespace-nowrap">AI Systems</div>
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full text-[11px] font-semibold text-slate-400 uppercase tracking-wider whitespace-nowrap pt-2">Automation</div>
-                <div className="absolute right-0 top-1/2 translate-x-full -translate-y-1/2 text-[11px] font-semibold text-slate-400 uppercase tracking-wider whitespace-nowrap pl-2">Products</div>
-                <div className="absolute left-0 top-1/2 -translate-x-full -translate-y-1/2 text-[11px] font-semibold text-slate-400 uppercase tracking-wider whitespace-nowrap pr-2">Engineering</div>
+                {/* Floating badge */}
+                <div className="absolute -bottom-4 -left-4 rounded-xl bg-white border border-slate-200 shadow-md px-4 py-2.5 flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="text-xs font-semibold text-slate-700">Open to opportunities</span>
+                </div>
               </div>
             </m.div>
           </div>
