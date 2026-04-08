@@ -189,6 +189,7 @@ export const MECWIDE_PROJECTS: EnterpriseProject[] = [
       "Designed and built a centralized internal portal giving employees access to the applications, tools, and resources they used daily — with a focus on clear navigation, usability, and workflow centralization.",
     outcome:
       "Reduced context-switching across teams and created a consistent, accessible internal interface as the standard entry point for daily operations.",
+    image: "/projects/employee-portal.jpeg",
   },
   {
     id: "vacation-management",
@@ -200,6 +201,7 @@ export const MECWIDE_PROJECTS: EnterpriseProject[] = [
       "Built a platform enabling employees to submit and track vacation requests, check leave balances, and view team calendar availability — simplifying a previously fragmented HR process.",
     outcome:
       "Eliminated manual coordination overhead and gave HR and team leads clear, real-time visibility into leave across the organization.",
+    image: "/projects/vacation-management.jpeg",
   },
   {
     id: "production-system",
@@ -211,6 +213,7 @@ export const MECWIDE_PROJECTS: EnterpriseProject[] = [
       "Contributed to the user-facing layer of an internal industrial platform, focusing on interface design and interaction quality to support operational teams working directly on the production floor.",
     outcome:
       "Delivered a cleaner, more reliable user experience for production operators, reducing interface friction in time-sensitive industrial workflows.",
+    image: "/projects/production-system.jpeg",
   },
   {
     id: "tool-allocation",
@@ -222,6 +225,7 @@ export const MECWIDE_PROJECTS: EnterpriseProject[] = [
       "Built a mobile application for managing the full lifecycle of work tools — allocation, delivery, return, and history — designed specifically for usability in field and on-site contexts.",
     outcome:
       "Improved operational accountability and reduced tool loss by giving field managers a clear, mobile-first view of tool movement and worksite inventory.",
+    image: "/projects/tool-allocation.jpeg",
   },
 ]
 

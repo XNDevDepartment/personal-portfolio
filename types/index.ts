@@ -56,4 +56,5 @@ export interface EnterpriseProject {
   problem: string
   contribution: string
   outcome: string
+  image: string
 }
