@@ -48,3 +48,12 @@ export interface NavLink {
   label: string
   href: string
 }
+
+export interface EnterpriseProject {
+  id: string
+  title: string
+  type: string
+  problem: string
+  contribution: string
+  outcome: string
+}
